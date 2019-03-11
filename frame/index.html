@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Второй сайт. Эта страница будет открыта внутри фрейма</title>
+ </head>
+ <body>
+    <h1>Привет! Я текст из фрейма</h1>
+
+    <script>
+        let oldFrameHeight = 0;
+
+        function getFrameHeight()
+        {
+            let html = document.documentElement;
+            let myHeight = (html.scrollHeight > html.offsetHeight)
+                ? html.scrollHeight
+                : html.offsetHeight;
+                  
+            return myHeight;
+        };
+
+        /* имитация поведения, когда размер содержимого фрейма меняется */
+        setInterval(() => {
+            let div = document.createElement('div');
+
+            div.textContent = 'Псс..парень, не хочешь немного Vue?';
+            document.body.append(div);
+        }, 2000);
+
+        /* оповещение об изменении размеров родительского окна */
+        setInterval(() => {
+            let frameHeight = getFrameHeight();
+
+            if (oldFrameHeight !== frameHeight) {
+                let parent = window.parent;
+
+                oldFrameHeight === frameHeight;
+                parent.postMessage(JSON.stringify(frameHeight), '<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Второй сайт. Эта страница будет открыта внутри фрейма</title>
+ </head>
+ <body>
+    <h1>Привет! Я текст из фрейма</h1>
+
+    <script>
+        let oldFrameHeight = 0;
+
+        function getFrameHeight()
+        {
+            let html = document.documentElement;
+            let myHeight = (html.scrollHeight > html.offsetHeight)
+                ? html.scrollHeight
+                : html.offsetHeight;
+                  
+            return myHeight;
+        };
+
+        /* имитация поведения, когда размер содержимого фрейма меняется */
+        setInterval(() => {
+            let div = document.createElement('div');
+
+            div.textContent = 'Псс..парень, не хочешь немного Vue?';
+            document.body.append(div);
+        }, 2000);
+
+        /* оповещение об изменении размеров родительского окна */
+        setInterval(() => {
+            let frameHeight = getFrameHeight();
+
+            if (oldFrameHeight !== frameHeight) {
+                let parent = window.parent;
+
+                oldFrameHeight === frameHeight;
+                parent.postMessage(JSON.stringify(frameHeight), 'htc-sgordeev.github.io');
+            }
+        }, 1000);
+    </script>
+ </body>
+ </html> 
+');
+            }
+        }, 1000);
+    </script>
+ </body>
+ </html> 
