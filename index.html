@@ -19,7 +19,7 @@
 
         function postMessageListener(event) {
             console.log(event.origin);
-            if (event.origin != 'https://htc-sgordeev.github.io/frame') {
+            if (event.origin != 'https://htc-sgordeev.github.io') {
                 return;
             }
             frame.height = parseInt(event.data, 10);
