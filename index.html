@@ -18,7 +18,6 @@
         let frame = document.getElementById('myFrame');
 
         function postMessageListener(event) {
-            console.log(event.origin);
             if (event.origin != 'https://htc-sgordeev.github.io') {
                 return;
             }
