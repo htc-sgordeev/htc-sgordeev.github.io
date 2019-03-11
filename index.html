@@ -18,7 +18,7 @@
         let frame = document.getElementById('myFrame');
 
         function postMessageListener(event) {
-            if (event.origin != 'htc-sgordeev.github.io/frame') {
+            if (event.origin != 'https://htc-sgordeev.github.io/frame/') {
                 return;
             }
             frame.height = parseInt(event.data, 10);
