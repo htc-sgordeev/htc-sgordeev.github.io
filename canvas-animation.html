@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <canvas id="canvas" width="600" height="300"></canvas>
+    <canvas id="canvas" width="600" height="300" style="border: 1px solid black"></canvas>
 
     <script>
        var canvas = document.getElementById('canvas');
@@ -41,10 +41,10 @@
         ball.x += ball.vx;
         ball.y += ball.vy;
 
-        if (ball.y + ball.vy > canvas.height || ball.y + ball.vy < 0) {
+        if (ball.y + ball.vy + ball.radius > canvas.height || ball.y + ball.vy + ball.radius < 0) {
             ball.vy = -ball.vy;
         }
-        if (ball.x + ball.vx > canvas.width || ball.x + ball.vx < 0) {
+        if (ball.x + ball.vx + ball.radius > canvas.width || ball.x + ball.vx + ball.radius < 0) {
             ball.vx = -ball.vx;
         }
 
